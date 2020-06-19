@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet"> 
+  
+    <title>Nimble Fox | Justas Dabrila</title>
+    <style>
+      html {
+        background: #f4f4f4      }
+
+            h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+        font-family: Helvetica, sans-serif;
+      }
+          
+      .fancy-url {
+            color: #1d1e29;
+    background-color: #d0dbee;
+    border-radius: 3px;
+
+    padding: 0px 4px 0px;
+    border-radius: 2px;
+
+    display: inline-block;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  
+        text-decoration: none;
+      }
+
+      .fancy-url:hover {
+        animation: fancy-url-fade-in linear 0.1s forwards;
+      }
+
+      .fancy-url img {
+        width: 16px;
+        height: 16px;
+        vertical-align: sub;
+      }
+
+      @keyframes fancy-url-fade-in {
+        0% {}
+        100% {
+          background-color: #e9b6d1;
+        }
+      }
+                newline {
+        display: block;
+      }
+                break {
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        margin: 32px 0px;
+        background-color: gray;
+      }
+    
+      .main-fit {
+        width: 100%;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+      }
+
+      body {
+        font-family: 'Work Sans', sans-serif;
+        padding-bottom: 64px;
+
+        margin: 0 auto 0 auto;
+        color: #1d1e29;
+
+        line-height: 1.5;
+        font-size: 1.05em;
+      }
+
+      top {
+        display: block;
+        padding: 100px;
+        padding-bottom: 0;
+      }
+
+      @media (max-width: 1000px) {
+        top {
+          padding: 0;
+        }
+        body {
+          padding-left: 8px;
+        }
+        .hide-mobile {
+          display: none;
+        }
+      }
+
+            
+    </style>
+  </head>
+    <body>
+    <top>
+      <a class="hide-mobile" href="/" style="
+        padding: 6px;
+        border-radius: 8px;
+        color: #1d1e29;
+        box-shadow: 0px 6px 8px rgba(0,0,0,0.075)
+        text-decoration: none;
+
+        background-color: #f3fecb;
+        border: #b8962f dotted 3px;
+      ">
+        👋 Justas
+      </a>
+
+      <div style="
+        max-width: 600px;
+        margin: 0 auto;
+      ">
+        <h1 style="
+          padding: 0;
+          margin: 0;
+        ">
+          Nimblefox
+        </h1>
+      </div>
+
+    </top>
+
+    <article style="
+      display: block;
+      max-width: 600px;
+      margin: 0 auto;
+    ">
+      <p>Nimblefox is an art tool I worked on full time between 2019-02-xx - 2019-07-xx.</p>
+      <p>Functionality is best explained with a video:</p>
+
+      <video class="main-fit" controls> <source src="perspective.webm"/></video>
+      <i>Shown: The Linear Perspective tool</i>
+
+      <p>The tool was designed to sit between the input device and the host program,
+      making it able to work with most drawing apps:</p>
+
+      <img class="main-fit" src="azpainter.png"/>
+      <i>Shown: nimblefox running on azpainter</i>
+
+      <img class="main-fit" src="aseprite.png"/>
+      <i>Shown: nimblefox running on aseprite</i>
+
+      <p>The tool had a small variety of "constraints". Here are some:</p>
+
+      <video class="main-fit" controls> <source src="ellipse.webm"/></video>
+      <i>Shown: The Ellipse tool</i>
+
+      <video class="main-fit" controls> <source src="bezier.webm"/></video>
+      <i>Shown: The Bezier tool</i>
+
+      <p>The tool had the ability to completely manipulate what the input device was reporting to the 
+      host program, which allowed for smoothing to be implemented:
+      </p>
+
+      <video class="main-fit" controls> <source src="smoothing.webm"/></video>
+      <i>Shown: The Weighted Average Smoothing setting</i>
+
+      <p>To meet design requirements, a custom immediate-mode UI was used.</p>
+
+    </article>
+
+    <bottom style="
+      display: block;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: 16px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    ">
+      <p>
+        <newline></newline>
+        <a href="/" class="fancy-url">Made by Justas</a>
+      </p>
+    </bottom>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163702246-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163702246-1');
+</script>
+    </body>
+</html>

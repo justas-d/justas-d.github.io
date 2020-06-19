@@ -1,328 +1,627 @@
-<!DOCTYPE html>
 <html lang="en">
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name=viewport content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
 
-  <title>Justas Dabrila</title>
+          <meta name="description" content="I'm Justas 🙂. Here's what I'm working on!" />
 
+      <meta name="twitter:site" content="@Justas_Dabrila">
+      <meta name="twitter:title" content="Justas Dabrila">
+      <meta name="twitter:description" content="I'm Justas 🙂. Here's what I'm working on!">
+      <meta name="twitter:creator" content="@Justas_Dabrila">
+
+      <meta property="og:title" content="Two-Slitherlink" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://ssstormy.github.io/" />
+      <meta property="og:description" content="I'm Justas 🙂. Here's what I'm working on!" />
+      <meta property="og:site_name" content="" />
+          <meta name="twitter:card" content="summary">
+      
+    <title>Justas Dabrila</title>
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet"> 
+  
     <style>
-        h1, h2 {
-            line-height:1.2;
+            .highlight {
+            color: #1d1e29;
+    background-color: #d0dbee;
+    border-radius: 3px;
+
+    padding: 0px 4px 0px;
+    border-radius: 2px;
+
+    display: inline-block;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        }
+                h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+        font-family: Helvetica, sans-serif;
+      }
+          
+      .fancy-url {
+            color: #1d1e29;
+    background-color: #d0dbee;
+    border-radius: 3px;
+
+    padding: 0px 4px 0px;
+    border-radius: 2px;
+
+    display: inline-block;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  
+        text-decoration: none;
+      }
+
+      .fancy-url:hover {
+        animation: fancy-url-fade-in linear 0.1s forwards;
+      }
+
+      .fancy-url img {
+        width: 16px;
+        height: 16px;
+        vertical-align: sub;
+      }
+
+      @keyframes fancy-url-fade-in {
+        0% {}
+        100% {
+          background-color: #e9b6d1;
+        }
+      }
+                .card h1 {
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+        line-height: 1.1;
+        text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.75)
+      }
+
+      @keyframes card-hover  {
+        0% {
+        }
+        100% {
+          transform: translateY(-2px);
+        }
+      }
+
+      .card {
+        background-color: orange;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+        margin: 16px;
+        display: flex;
+        text-decoration: none;
+
+        background-size: cover;
+        background-position: center;
+      }
+
+      .card:hover {
+        animation: card-hover linear 0.1s forwards;
+      }
+
+      .card .inner {
+        font-size: 1.5em;
+        color: whitesmoke;
+        width: 70%;
+        height: 70%;
+        margin: auto;
+      }
+
+
+                newline {
+        display: block;
+      }
+                break {
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        margin: 32px 0px;
+        background-color: gray;
+      }
+    
+      monospace {
+        font-family: monospace;
+      }
+
+      html {
+        background: #f4f4f4      }
+
+      emoji {
+        filter: drop-shadow(0px 5px 3px rgba(0,0,0,0.25));
+      }
+
+      .card .inner {
+        display: flex;
+        align-items: center;
+      }
+
+      ::selection {
+        color: white;
+        background: #d0dbee;
+      }
+
+      .dump {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+      }
+
+      .thing-type {
+        display: inline-block; 
+        font-size: 0.9em;
+        min-width: 58px;
+      }
+
+      body {
+        font-family: 'Work Sans', sans-serif;
+        padding: 32px 0px 64px;
+
+        margin: 0 auto 0 auto;
+        color: #1d1e29;
+
+        line-height: 1.5;
+        font-size: 1.05em;
+
+        max-width: 1000px;
+      }
+
+      .currently {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+      }
+
+      @media (max-width: 1000px) {
+        .dump {
+          grid-template-columns: 1fr;
         }
 
-        .info > * {
-            margin-top: 10px;
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .hide-mobile {
+          display: none;
         }
 
         body {
-            font-family: Helvetica, sans-serif;
-
-            margin: 0 auto 0 auto;
-
-            max-width:600px;
-
-            line-height:1.6;
-            font-size:18px;
-            color:#444;
-            padding:0 10px;
+          padding-left: 8px;
         }
 
-        .things > div {
-            position: relative;
+        .currently {
+          grid-template-columns: auto;
         }
+      }
 
-        .things > div > b {
-            position: absolute;
-            right: 0;
-        }
 
-        .right { float: right }
-        .email { display: block }
-
-        .game {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .game > * {
-            margin: 10px;
-        }
-
-        .game > img {
-            min-width: 300px;
-            min-height: 300px;
-            max-width: 300px;
-            max-height: 300px;
-            width: 300px;
-            height: 300px;
-            border: 1px solid gray;
-            object-fit: cover;
-        }
-
-        .game .desc {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .game .desc h3 {
-            margin: 0;
-        }
-            
     </style>
-</head>
-<body>
-    <h1>Hi,</h1>
+  </head>
 
-    <div style="display: grid; grid-template-columns: auto auto;">
-        <div>
-            <div>I'm Justas Dabrila.</div>
-            <div>
-                I make <a href="https://www.youtube.com/watch?v=NflCU9gEf-I">programs</a>
-                <small>
-                    <a href="https://www.youtube.com/watch?v=lP8PFZDznBE">music</a>
-                    <a href="https://youtu.be/OGSeLSmOALU?t=1m20s">games</a>
-                    <a href="https://twitter.com/search?q=%23pixel_dailies&f=live">drawing</a>
-                </small>
-            </div>
+  <body>
+    <h1 class="heading">
+      <emoji>👋 </emoji>
+      Hi, I'm
+      <span style="
+        background: rgb(27,27,27);
+        background: linear-gradient(137deg, #1d1e29 0%, #1a6095 100%); 
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      ">
+        Justas
+      </span>
+    </h1>
+
+    Currently, I am:
+
+    <div class="currently">
+      <a href="https://twitter.com/Justas_Dabrila/status/1247187567574908928" class="card" style="
+        background-image: url('crate-worlds.svg'); 
+        background-size: 100%;
+      ">
+        <div class="inner">
+          <h1 class="shadow-text">
+            Building
+            <newline></newline>
+            A Game
+            <newline></newline>
+            <small><i>Soko-Islands</i></small>
+          </h1>
         </div>
-        <div>
-            <div class="right"> 
-                <a class="right" href="https://twitter.com/justas_dabrila">@justas_dabrila</a>
-                <a class="email" href="">justasdabrila@gmail.com</a>
-                <div></div>
-            </div>
+      </a>
+
+
+      <a href=https://justas-d.itch.io/ class="card" style="
+        background-image: url('nebula_oil.png');
+      ">
+        <div class="inner">
+          <h1 class="shadow-text">
+            Prototyping
+            <newline></newline>
+            Games
+          </h1>
         </div>
+      </a>
+
     </div>
 
-    <div class="game">
-        <img src="puzzles/two-slitherlink2/two-slitherlink2.png"/>
+    Notable Projects:
 
-        <div class="desc">
-            <h3>Two-Slitherlink 2</h3>
-            <small>2020-06-11</small>
-            <div>
-                <a href="puzzles/two-slitherlink2/">Paper puzzle</a>
-            </div>
-        </div>
+    <a href="https://ssstormy.itch.io/in-a-game-wherein" class="card" style="
+      background-image: url('in-a-game-wherein.svg');
+    ">
+      <div class="inner">
+        <h1 class="shadow-text">
+          In a Game Wherein
+          <newline></newline>
+          <small>You are preparing to play a game</small>
+          <newline></newline>
+          <small><i>2020, Ludum Dare 46</i></small>
+        </h1>
+      </div>
+    </a>
+
+    <a href="https://ssstormy.github.io/roll20-enhancement-suite/" class="card" style="
+      background-image: url('vttes.svg');
+    ">
+      <div class="inner">
+        <h1 class="shadow-text">
+          VTT Enhancement Suite
+          <newline></newline>
+          <small>Improve Roll20, Chrome & Firefox</small>
+          <newline></newline>
+          <small><i>2018 - now</i></small>
+        </h1>
+      </div>
+    </a>
+
+    <h2><emoji>❓</emoji> Who's this guy</h2>
+
+    <div style="
+      padding-bottom: 8px;
+    ">
+      I'm Justas Dabrila 🙂. I do ⚙️ systems programming, 🖥️ webdev, 🎮 game development and, sometimes, 🎹 🎨 everything in-between.
     </div>
 
-    <div class="game">
-        <img src="puzzles/two-slitherlink/two-slitherlink.png"/>
-
-        <div class="desc">
-            <h3>Two-Slitherlink</h3>
-            <small>2020-05-26</small>
-            <div>
-                <a href="puzzles/two-slitherlink/">Paper puzzle</a>
-            </div>
-        </div>
+    <div>
+      🌍 Currently based in Kaunas, Lithuania.
     </div>
 
+    <div>
+      🔗 I'm on 
+      <a class="fancy-url" href="https://twitter.com/Justas_Dabrila">
+        <img src="twitter.svg">
+        Twitter
+      </a> 
 
-    <div class="game">
-        <img src="img/hexinfer.png"/>
+      <a class="fancy-url" href="https://justas-d.itch.io/">
+        <img src="itch.svg">
+        Itch
+      </a> 
 
-        <div class="desc">
-            <h3>Hexinfer</h3>
-            <small>2020-05-10</small>
-            <div>
-                <a href="https://justas-d.itch.io/hexinfer">Play/Source (HTML5)</a>
-            </div>
-        </div>
+      <a class="fancy-url" href="https://github.com/SSStormy">
+        <img src="github.svg">
+        GitHub
+      </a> 
     </div>
 
-    <div class="game">
-        <img src="img/in-a-game-wherein.png"/>
-
-        <div class="desc">
-            <h3>In A Game Wherein</h3>
-            <small>2020-04-18</small>
-            <div>
-                <a href="https://ssstormy.itch.io/in-a-game-wherein">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/in-a-game-wherein">Source</a>
-            </div>
-            <span>In 48 hours during <a href="https://ldjam.com/events/ludum-dare/46/in-a-game-wherein">LD46</a></span>
-        </div>
+    <div>
+      📧 You can also email me! Just piece this together: 
+      <span class="highlight">com@justasdabrila.gmail</span>
     </div>
 
-    <div class="game">
-        <img src="img/fitkitban.png"/>
-
-        <div class="desc">
-            <h3>Fitkitban</h3>
-            <small>2020-02-07</small>
-            <div>
-                <a href="https://ssstormy.itch.io/fitkitban">Play & Source (HTML5)</a>
-            </div>
-        </div>
+    <div>
+      If you want to buy me a coffee, you can <a class="fancy-url" href="coffee.html">☕ here</a>!
     </div>
 
-    <div class="game">
-        <img src="img/strange-warehouse.png"/>
+    <h3 style="
+      margin-top: 32px;
+      margin-bottom: 32px;
+    ">
+      <emoji>🎹</emoji> 
+      Some Things I Have Made
+      <small>(<i>including the awful ones</i>)</small>
+    </h3>
+      <div class="dump">
+      <div><div>
+  <monospace>
+    2020-06-12    <span class="hide-mobile thing-type">Puzzle</span>
+  </monospace>
 
-        <div class="desc">
-            <h3>Strange Warehouse</h3>
-            <small>2020-02-02</small>
-            <div>
-                <a href="https://ssstormy.itch.io/strange-warehouse">Play & Source (HTML5)</a>
-            </div>
-            <span>In 48 hours during GGJ2020</span>
-        </div>
+  <a class="fancy-url" href=two-slitherlinks-2>Two Slitherlinks 2</a>
+</div>
+    <div>
+  <monospace>
+    2020-05-26    <span class="hide-mobile thing-type">Puzzle</span>
+  </monospace>
+
+  <a class="fancy-url" href=two-slitherlinks-1>Two Slitherlinks</a>
+</div>
+    <div>
+  <monospace>
+    2020-04-13    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://justas-d.itch.io/in-a-game-wherein>In a Game Wherein</a>
+</div>
+    <div>
+  <monospace>
+    2020-02-01    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://justas-d.itch.io/strange-warehouse>Strange Warehouse</a>
+</div>
+    <div>
+  <monospace>
+    2020-xx-xx    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://justas-d.itch.io/hexinfer>Hexinfer</a>
+</div>
+    <div>
+  <monospace>
+    20xx-xx-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/roll20-enhancement-suite/>VTT Enhancement Suite</a>
+</div>
+    <div>
+  <monospace>
+    2019-10-08    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://justas-d.itch.io/snake-sokoban-spiral>Snake Sokoban Spiral</a>
+</div>
+    <div>
+  <monospace>
+    2019-xx-xx    <span class="hide-mobile thing-type">Article</span>
+  </monospace>
+
+  <a class="fancy-url" href=http://www.procjam.com/seeds/issues/4/issue4.pdf>worldgen, seeds issue 4</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-29    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/visionban>Visionban</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-27    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/coroutine>C coroutines</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-21    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/height>height</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-20    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/breakout>breakout</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-13    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/book>book</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-07    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/pull>pull</a>
+</div>
+    <div>
+  <monospace>
+    2019-09-01    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/tetris-fill/>tetris-fill</a>
+</div>
+    <div>
+  <monospace>
+    2019-xx-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=nimblefox.html>nimblefox</a>
+</div>
+    <div>
+  <monospace>
+    2019-07-24    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/yeet.ogg>sax satb</a>
+</div>
+    <div>
+  <monospace>
+    2019-06-24    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=turns.webm>turns</a>
+</div>
+    <div>
+  <monospace>
+    2019-06-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/shader-livecode>visually pleasing glsl shaders</a>
+</div>
+    <div>
+  <monospace>
+    2019-03-24    <span class="hide-mobile thing-type">A Mess</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/vim-no-escape>vim disable arrow keys</a>
+</div>
+    </div>
+      <div><div>
+  <monospace>
+    2019-03-02    <span class="hide-mobile thing-type">Video</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://www.youtube.com/watch?v=UzQif6bJDnQ>Reverse engineering GameMaker DRM</a>
+</div>
+    <div>
+  <monospace>
+    2019-03-02    <span class="hide-mobile thing-type">Video</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://www.youtube.com/watch?v=geRTX9sgGJo>Reverse engineering Hotline Miami 2 DRM</a>
+</div>
+    <div>
+  <monospace>
+    2019-02-01    <span class="hide-mobile thing-type">Disaster</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://www.youtube.com/watch?v=93WLvPlTds4>cyboogie extreme stu closeups</a>
+</div>
+    <div>
+  <monospace>
+    2019-01-13    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/Untitled-3-attb.ogg>attb</a>
+</div>
+    <div>
+  <monospace>
+    2019-01-06    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=games/p-grappler/>grappler</a>
+</div>
+    <div>
+  <monospace>
+    2019-01-01    <span class="hide-mobile thing-type">Game</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://justas-d.itch.io/dont-waste-jams>dont waste jams</a>
+</div>
+    <div>
+  <monospace>
+    2018-xx-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/mpd-rich-presence-discord>MPD Discord Rich Presence</a>
+</div>
+    <div>
+  <monospace>
+    2018-12-31    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/reaction.mp3>reaction</a>
+</div>
+    <div>
+  <monospace>
+    2018-12-25    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/2018-12-25-more-strings.ogg>more strings</a>
+</div>
+    <div>
+  <monospace>
+    2018-12-24    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/2018-12-24-harpsisketch.ogg>harpsichord</a>
+</div>
+    <div>
+  <monospace>
+    2018-12-23    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/2018-12-23-enzo-sketch-mixed5.ogg>enzo sketch</a>
+</div>
+    <div>
+  <monospace>
+    2018-12-04    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://ssstormy.github.io/spriteatlas/>spriteatlas</a>
+</div>
+    <div>
+  <monospace>
+    2018-11-29    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/2018-11-29-2.mp3>2</a>
+</div>
+    <div>
+  <monospace>
+    2018-09-04    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/roll20auth>roll20auth</a>
+</div>
+    <div>
+  <monospace>
+    2018-05-08    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://gist.github.com/SSStormy/94672346fabec1a82862dce85c6df835>cpphotload</a>
+</div>
+    <div>
+  <monospace>
+    2018-04-25    <span class="hide-mobile thing-type">Demo</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://www.youtube.com/watch?v=9baVLUN3qW0>square synths & square scenery</a>
+</div>
+    <div>
+  <monospace>
+    2018-03-22    <span class="hide-mobile thing-type">Music</span>
+  </monospace>
+
+  <a class="fancy-url" href=audio/saw_doom.ogg>saw_doom</a>
+</div>
+    <div>
+  <monospace>
+    2017-xx-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/vermintide-lua-hook>Vermintide LUA Hook</a>
+</div>
+    <div>
+  <monospace>
+    2017-xx-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/cscape>C# Runescape Server</a>
+</div>
+    <div>
+  <monospace>
+    2017-xx-xx    <span class="hide-mobile thing-type">Program</span>
+  </monospace>
+
+  <a class="fancy-url" href=https://github.com/SSStormy/OpenTerrariaClient>OpenTerrariaClient</a>
+</div>
+    </div>
     </div>
 
-    <div class="game">
-        <img src="img/sss.png"/>
+    <break></break>
 
-        <div class="desc">
-            <h3>Snake Sokoban Spiral</h3>
-            <small>2019-10-06</small>
-            <div>
-                <a href="https://ssstormy.itch.io/snake-sokoban-spiral">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/rollmovesnake">Source</a>
-            </div>
-            <span>In 48 hours during <a href="https://ldjam.com/events/ludum-dare/45/snake-sokoban-spiral">LD45</a></span>
-        </div>
+    <div style="
+      text-align: center;
+    ">
+      Built with help from Lua. <a class="fancy-url" href="https://github.com/SSStormy/ssstormy.github.io">View source</a>.
     </div>
-
-    <div class="game">
-        <img src="img/visionban.png"/>
-
-        <div class="desc">
-            <h3>Visionban</h3>
-            <small>2019-09-28</small>
-            <div>
-                <a href="/visionban/">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/visionban/">Source</a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="game">
-        <img src="img/height.png"/>
-
-        <div class="desc">
-            <h3>Height</h3>
-            <small>2019-09-20</small>
-            <div>
-                <a href="/height/">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/height/">Source</a>
-            </div>
-            <span>Inspired by <a href="http://hcsoftware.sourceforge.net/gravitation/">Jason Rohrer's Gravitation</a></span>
-        </div>
-    </div>
-
-    <div class="game">
-        <img src="img/breakout.png"/>
-
-        <div class="desc">
-            <h3>Breakout</h3>
-            <small>2019-09-14</small>
-            <div>
-                <a href="/breakout/">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/breakout">Source</a>
-            </div>
-            <span>Feel sketch</span>
-        </div>
-    </div>
-
-
-    <div class="game">
-        <img src="img/book.jpg"/>
-
-        <div class="desc">
-            <h3>Book</h3>
-            <small>2019-09-13</small>
-            <div>
-                <a href="/book/">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/book">Source</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="game">
-        <img src="img/pull.png"/>
-
-        <div class="desc">
-            <h3>Pull</h3>
-            <small>2019-09-07</small>
-            <div>
-                <a href="/pull/">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/pull">Source</a>
-            </div>
-            <span>Interaction & feel sketch</span>
-        </div>
-    </div>
-
-
-    <div class="game">
-        <img src="img/tetris-fill.png"/>
-
-        <div class="desc">
-            <h3>Tetris Fill</h3>
-            <small>2019-09-01</small>
-            <div>
-                <a href="/tetris-fill/">Play (HTML5)</a>
-                <a href="https://github.com/SSStormy/tetris-fill">Source</a>
-            </div>
-
-            <span>Inspired by increpare's <a
-                    href="https://www.increpare.com/game/tetromino-slide-tetromino-rutsch.html">Tetromino
-                    Slide</a></span>
-        </div>
-    </div>
-
-    <div class="game">
-        <img src="img/dontwaste.png"/>
-
-        <div class="desc">
-            <h3>DONT WASTE JAMS</h3>
-            <small>2019-01-01</small>
-            <div>
-                <a href="https://ssstormy.itch.io/dont-waste-jams">Play (WIN/LINUX)</a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="things">
-        <h3>Other Things</h3>
-        <div><b>Program</b><a href="/subpage/nimblefox/index.html"/>nimblefox</a></div>
-        <div><b>Program</b><a href="https://ssstormy.github.io/roll20-enhancement-suite/">VTT Enhancement Suite (R20ES)</a></div>
-        <div><b>Program</b><a href="https://github.com/SSStormy/mpd-rich-presence-discord">MPD Discord Rich Presence</a></div>
-        <div><b>Program</b><a href="https://github.com/SSStormy/vermintide-lua-hook">vermintide-lua-hook</a></div>
-    </div>
-
-    <div class="things">
-        <h4>Small Things</h4>
-        <div>19-07-24<b>Music</b> <a href="audio/yeet.ogg">untitled sax satb</a></div>
-        <div>19-06-24<b>Game</b> <a href="img/turns.webm">turns</a></div>
-        <div>19-06-**<b>Program</b> <a href="https://github.com/SSStormy/shader-livecode">visually pleasing glsl shaders</a></div>
-        <div>19-03-24<b>Program</b> <a href="https://github.com/SSStormy/vim-no-escape">vim-no-escape</a></div>
-        <div>19-02-01<b>Video</b> <a href="https://www.youtube.com/watch?v=93WLvPlTds4">cyboogie extreme stu closeups </a></div>
-        <div>19-01-13<b>Music</b> <a href="audio/Untitled-3-attb.ogg">untitled attb</a></div>
-        <div>19-01-06<b>Prototype</b> <a href="games/p-grappler/">platform grappler</a></div>
-        <div>18-12-31<b>Music</b> <a href="audio/reaction.mp3">reaction (for DONT WASTE JAMS)</a></div>
-        <div>18-12-25<b>Music</b> <a href="audio/2018-12-25-more-strings.ogg">more strings</a></div>
-        <div>18-12-24<b>Music</b> <a href="audio/2018-12-24-harpsisketch.ogg">harpsisketch</a></div>
-        <div>18-12-23<b>Music</b> <a href="audio/2018-12-23-enzo-sketch-mixed5.ogg">Enzo sketch</a></div>
-        <div>18-12-04<b>Tool</b> <a href="https://ssstormy.github.io/spriteatlas/">spriteatlas</a></div>
-        <div>18-11-29<b>Music</b> <a href="audio/2018-11-29-2.mp3">2</a></div>
-        <div>18-09-04<b>Tool</b> <a href="https://github.com/SSStormy/roll20auth">roll20auth</a></div>
-        <div>18-05-08<b>Program</b> <a href="https://gist.github.com/SSStormy/94672346fabec1a82862dce85c6df835">cpp hotloading, linux</a></div>
-        <div>18-04-25<b>Video</b> <a href="https://www.youtube.com/watch?v=9baVLUN3qW0">square synths & square scenery</a></div>
-        <div>18-03-22<b>Music</b> <a href="audio/saw_doom.ogg">saw_doom</a></div>
-    </div>
-    <hr/>
-    <small>Thank you for taking a look!</small>
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163702246-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -331,7 +630,5 @@
 
   gtag('config', 'UA-163702246-1');
 </script>
-
-</body>
-
-
+    </body>
+</html>
