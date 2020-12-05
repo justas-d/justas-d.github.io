@@ -51,7 +51,11 @@
       h1,h2,h3,h4,h5,h6 {
         font-family: Helvetica, sans-serif;
       }
-                .card h1 {
+                newline {
+        display: block;
+      }
+    
+      .card h1 {
         font-size: 1em;
         padding: 0;
         margin: 0;
@@ -73,7 +77,7 @@
         min-width: 200px;
         min-height: 200px;
         border-radius: 10px;
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.4);
         margin: 16px;
         display: flex;
         text-decoration: none;
@@ -89,24 +93,18 @@
       .card .inner {
         font-size: 1.5em;
         color: whitesmoke;
-        width: 70%;
         height: 70%;
         margin: auto;
+
+        display: grid;
+        grid-template-rows: 50% 1em 1em;
+
+        width: 100%;
       }
 
-
-                newline {
-        display: block;
-      }
-    
       html {
         background: rgb(255,116,63);
         background: linear-gradient(136deg, rgba(255,116,63,1) 0%, rgba(254,180,132,1) 100%);
-      }
-
-      .card .inner {
-        display: grid;
-        grid-template-rows: 50% 1em 1em;
       }
 
       ::selection {
@@ -235,6 +233,24 @@
           </div>
         </a>
 
+        <a href="https://www.patreon.com/bePatron?u=11619189" class="card" style="
+          background-image: url('patreon.svg');
+          background-size: 100%;
+          filter: saturate(60%);
+        ">
+          <div class="inner">
+            <h1 style="
+              display: flex; 
+              justify-content: center;
+            ">
+              <span style="align-self: flex-end">Patreon</span>
+            </h1>
+            <small>Recurring</small>
+            <small>Has Tax, Fees</small>
+          </div>
+        </a>
+
+
         <a href="https://www.buymeacoffee.com/stormy" class="card" style="
           background-image: url('bmc.svg');
           background-size: 100%;
@@ -257,10 +273,8 @@
       <div class="description">
         I'm currently maintaining 
         <a href="https://justas-d.github.io/roll20-enhancement-suite/" class="fancy-url">🎲 VTTES</a>, 
-        making 
-        <a href="https://justas-d.itch.io/" class="fancy-url">🎮 puzzle games</a>
-        and making
-        <a href="two-slitherlinks-2.html" class="fancy-url">🧩 logic puzzles</a>. 
+        and making 
+        <a href="https://justas-d.itch.io/" class="fancy-url">🎮 puzzle games</a>.
         <newline></newline>
 
         All of which are free. 
